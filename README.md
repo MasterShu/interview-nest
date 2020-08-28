@@ -14,4 +14,6 @@ npm run start:server
 npm run start:client
 ```
 
-Then visit http://localhost:8800/schools/1
+Then visit http://localhost:8800/schools/1 # show school by school id
+
+visit http://localhost:8800/schools/addSchool/university%20of%20california # Created a new school

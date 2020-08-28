@@ -7,6 +7,11 @@ import "google/protobuf/empty.proto";
 service SchoolService {
     rpc Get (GetSchoolRequest) returns (GetSchoolResponse) {
     }
+    rpc Add (AddSchoolRequest) returns (School){}
+}
+
+message AddSchoolRequest {
+    string schoolName = 1;
 }
 
 message GetSchoolRequest {

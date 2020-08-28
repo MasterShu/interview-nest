@@ -18,6 +18,7 @@
     "@nestcloud/service": "^0.7.15",
     "@nestjs/common": "^7.4.2",
     "@nestjs/core": "^7.4.2",
+    "@nestjs/cqrs": "^7.0.1",
     "@nestjs/microservices": "^7.4.2",
     "@nestjs/platform-express": "^7.4.2",
     "@nestjs/terminus": "^7.0.1",

@@ -10,3 +10,7 @@ export interface GetSchoolRequest {
 export interface GetSchoolResponse {
   school: School;
 }
+
+export interface AddSchoolRequest {
+  schoolName: string;
+}

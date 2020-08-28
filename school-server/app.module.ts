@@ -6,6 +6,9 @@ import { BOOT, CONSUL } from "@nestcloud/common";
 import { ServiceModule } from "@nestcloud/service";
 import { LoadbalanceModule } from "@nestcloud/loadbalance";
 import { SchoolController } from "./school.controller";
+import { CqrsModule } from "@nestjs/cqrs";
+import { QueryHandlers } from "./queries/handlers";
+import { CommandHandlers } from "./commands/handlers";
 
 @Module({
   imports: [
@@ -13,7 +16,9 @@ import { SchoolController } from "./school.controller";
     ConsulModule.forRootAsync({ inject: [BOOT] }),
     ServiceModule.forRootAsync({ inject: [BOOT, CONSUL] }),
     LoadbalanceModule.forRootAsync({ inject: [BOOT] }),
+    CqrsModule,
   ],
   controllers: [SchoolController],
+  providers: [...CommandHandlers, ...QueryHandlers],
 })
 export class AppModule {}
